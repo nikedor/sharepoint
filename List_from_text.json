@@ -1,0 +1,60 @@
+{
+    "sections": [
+        {
+            "displayname": "Счет",
+            "fields": [
+                "Date",
+                "Title",
+                "Author",
+                "Payment_to",
+                "Original_Payment_Cert"
+            ]
+        },
+        {
+            "displayname": "Получатель",
+            "fields": [
+                "Rceiver",
+                "Account_No",
+                "INN",
+                "KPP"
+            ]
+        },
+        {
+            "displayname": "Банк получателя",
+            "fields": [
+                "_x041f__x043e__x043b__x0443__x04",
+                "Corr_Account",
+                "BIK"
+            ]
+        },
+        {
+            "displayname": "Реквизиты для платежей в бюджет",
+            "fields": [
+                "OKTMO",
+                "KBK",
+                "UIN"
+            ]
+        },
+        {
+            "displayname": "Плательщик",
+            "fields": [
+                "Payer"
+            ]
+        },
+        {
+            "displayname": "Назначение платежа",
+            "fields": [
+                "Goods",
+                "Amount"
+            ]
+        },
+        {
+            "displayname": "Реквизиты счета",
+            "fields": [
+                "InvoiceNumber",
+                "Sent_to_Payment",
+                "_x0421_reate_x0020_Invoice"
+            ]
+        }
+    ]
+}
