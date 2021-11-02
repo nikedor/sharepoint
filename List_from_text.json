@@ -1,3 +1,48 @@
+//header
+
+{
+    "elmType": "div",
+    "attributes": {
+        "class": "ms-bgColor-themePrimary ms-fontColor-white"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "style": {
+                "margin": "10px",
+                "width": "100%",
+                "border": "2px dashed",
+                "padding": "10px",
+                "flex-direction": "column"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "txtContent": "[$Title]",
+                    "style": {
+                        "text-align": "left"
+                    },
+                    "attributes": {
+                        "class": "ms-fontSize-24 ms-fontWeight-bold"
+                    }
+                },
+                {
+                    "elmType": "div",
+                    "txtContent": "='Номер '+(if([$InvoiceNumber] == '' , 'не получен' , [$InvoiceNumber])",
+                    "style": {
+                        "text-align": "left",
+                        "display": "=if([$InvoiceNumber] == '' , 'не получен' , '')"
+                    },
+                    "attributes": {
+                        "class": "ms-fontSize-16"
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+//text fied
 {
     "sections": [
         {
@@ -20,7 +65,7 @@
             ]
         },
         {
-            "displayname": "Банк получателя",
+            "displayname": "Банк получателя (Казначейство)",
             "fields": [
                 "_x041f__x043e__x043b__x0443__x04",
                 "Corr_Account",
@@ -54,6 +99,70 @@
                 "InvoiceNumber",
                 "Sent_to_Payment",
                 "_x0421_reate_x0020_Invoice"
+            ]
+        }
+    ]
+}
+
+//footer
+
+{
+    "debugMode": true,
+    "elmType": "div",
+    "attributes": {
+        "class": "ms-borderColor-neutralTertiary"
+    },
+    "style": {
+        "width": "99%",
+        "border-top-width": "0px",
+        "border-bottom-width": "1px",
+        "border-left-width": "0px",
+        "border-right-width": "0px",
+        "border-style": "solid",
+        "margin-bottom": "16px"
+    },
+    "children": [
+        {
+            "elmType": "div",
+            "style": {
+                "display": "flex",
+                "box-sizing": "border-box",
+                "align-items": "center"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "attributes": {
+                        "iconName": "Bill",
+                        "class": "ms-fontSize-42 ms-fontWeight-regular ms-fontColor-themePrimary",
+                        "title": "Details"
+                    },
+                    "style": {
+                        "flex": "none",
+                        "padding": "0px",
+                        "padding-left": "0px",
+                        "height": "36px"
+                    }
+                }
+            ]
+        },
+        {
+            "elmType": "div",
+            "attributes": {
+                "class": "ms-fontColor-neutralSecondary ms-fontWeight-bold ms-fontSize-24"
+            },
+            "style": {
+                "box-sizing": "border-box",
+                "width": "100%",
+                "text-align": "left",
+                "padding": "21px 12px",
+                "overflow": "hidden"
+            },
+            "children": [
+                {
+                    "elmType": "div",
+                    "txtContent": "=if([$Sent_to_Payment] == true , 'Отправлен' , 'Не отправлен')"
+                }
             ]
         }
     ]
