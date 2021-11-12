@@ -1,0 +1,23 @@
+{
+    "$schema": "https: //developer.microsoft.com/en-us/json-schemas/sp/column-formatting.schema.json",
+    "elmType": "span",
+    "style": {
+        "color": "#0078d7"
+    },
+    "children": [
+        {
+            "elmType": "span"
+        },
+        {
+            "elmType": "button",
+            "style": {
+                "cursor": "pointer"
+            },
+            "txtContent": "=if([$Original_Payment_Cert] == '', '', 'Запросить копию')",
+            "customRowAction": {
+                "action": "executeFlow",
+                "actionParams": "{\"id\": \"de9e8f81-fccb-4867-93d5-97d893e12eba\"}"
+            }
+        }
+    ]
+}
