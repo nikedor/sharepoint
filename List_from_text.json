@@ -81,16 +81,16 @@
             ]
         },
         {
-            "displayname": "Плательщик",
-            "fields": [
-                "Payer"
-            ]
-        },
-        {
             "displayname": "Назначение платежа",
             "fields": [
                 "Goods",
                 "Amount"
+            ]
+        },
+        {
+            "displayname": "Плательщик",
+            "fields": [
+                "Payer"
             ]
         },
         {
