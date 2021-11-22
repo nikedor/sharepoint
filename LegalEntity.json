@@ -1,5 +1,4 @@
 //header
-
 {
     "elmType": "div",
     "attributes": {
@@ -18,91 +17,57 @@
             "children": [
                 {
                     "elmType": "div",
-                    "txtContent": "=if([$Title] == '' , 'New Invoice' , '[$Title]')",
+                    "txtContent": "[$Title]",
                     "style": {
                         "text-align": "left"
                     },
                     "attributes": {
                         "class": "ms-fontSize-24 ms-fontWeight-bold"
                     }
-                },
-                {
-                    "elmType": "div",
-                    "txtContent": "[$NumberInvoice]",
-                    "style": {
-                        "text-align": "left"
-                        },
-                    "attributes": {
-                        "class": "ms-fontSize-16"
-                    }
                 }
             ]
         }
     ]
 }
-
 //text fied
 {
     "sections": [
         {
-            "displayname": "Счет",
+            "displayname": "",
             "fields": [
-                "NumberInvoice",
-                "Date",
-                "Title",
-                "Payment_to",
-                "Original_Payment_Cert"
+                "Title"
             ]
         },
         {
-            "displayname": "Получатель",
+            "displayname": "Russian",
             "fields": [
-                "Rceiver",
-                "Account_No",
+                "BusinessRus",
+                "Short Name",
+                "Address",
+                "GeneralDirector"
+            ]
+        },
+        {
+            "displayname": "English",
+            "fields": [
+                "BusinessEng",
+                "ShortNameEng",
+                "AddressEng",
+                "GeneralDirectorEng"
+            ]
+        },
+        {
+            "displayname": "Реквизиты",
+            "fields": [
                 "INN",
-                "KPP"
+                "OGRN",
+                "KPP",
+                "OKPO"
             ]
-        },
-        {
-            "displayname": "Банк получателя (Казначейство)",
-            "fields": [
-                "_x041f__x043e__x043b__x0443__x04",
-                "Corr_Account",
-                "BIK"
-            ]
-        },
-        {
-            "displayname": "Реквизиты для платежей в бюджет",
-            "fields": [
-                "OKTMO",
-                "KBK",
-                "UIN"
-            ]
-        },
-        {
-            "displayname": "Назначение платежа",
-            "fields": [
-                "Goods",
-                "Amount"
-            ]
-        },
-        {
-            "displayname": "Плательщик",
-            "fields": [
-                "Payer"
-            ]
-        },
-        {
-            "displayname": "Реквизиты счета",
-            "fields": [
-                "Sent_to_Payment"
-                ]
         }
     ]
 }
-
 //footer
-
 {
     "debugMode": true,
     "elmType": "div",
@@ -130,7 +95,7 @@
                 {
                     "elmType": "div",
                     "attributes": {
-                        "iconName": "Bill",
+                        "iconName": "Email",
                         "class": "ms-fontSize-42 ms-fontWeight-regular ms-fontColor-themePrimary",
                         "title": "Details"
                     },
@@ -157,8 +122,18 @@
             },
             "children": [
                 {
-                    "elmType": "div",
-                    "txtContent": "=if([$Sent_to_Payment] == true , 'Отправлен' , 'Не отправлен')"
+                    "elmType": "span"
+                },
+                {
+                    "elmType": "button",
+                    "style": {
+                        "cursor": "pointer"
+                    },
+                    "txtContent": "Получить реквизиты на почту",
+                    "customRowAction": {
+                        "action": "executeFlow",
+                        "actionParams": "{\"id\": \"ec119796-ae25-494b-b781-d3926719427c\"}"
+                    }
                 }
             ]
         }
