@@ -57,24 +57,24 @@
         {
             "displayname": "Получатель",
             "fields": [
-                "Rceiver",
-                "Account_No",
-                "INN",
-                "KPP"
+                "CP_INN_x003a__x041a__x043e__x043",
+                "CP_INN_x003a_AccNo",
+                "CP_INN",
+                "CP_INN_x003a_KPP"
             ]
         },
         {
             "displayname": "Банк получателя (Казначейство)",
             "fields": [
-                "_x041f__x043e__x043b__x0443__x04",
-                "Corr_Account",
-                "BIK"
+                "CP_INN_x003a_CPBank",
+                "CP_INN_x003a_CorrAcc",
+                "CP_INN_x003a_BIK"
             ]
         },
         {
             "displayname": "Реквизиты для платежей в бюджет",
             "fields": [
-                "OKTMO",
+                "CP_INN_x003a_OKTMO",
                 "KBK",
                 "UIN"
             ]

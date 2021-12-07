@@ -41,8 +41,8 @@
         {
             "displayname": "Russian",
             "fields": [
-                "BusinessRus",
-                "Short Name",
+                "FullName",
+                "ShortName",
                 "Address",
                 "GeneralDirector"
             ]
@@ -50,19 +50,49 @@
         {
             "displayname": "English",
             "fields": [
-                "BusinessEng",
+                "FullNameEng",
                 "ShortNameEng",
                 "AddressEng",
                 "GeneralDirectorEng"
             ]
         },
         {
-            "displayname": "Реквизиты",
+            "displayname": "Details",
             "fields": [
                 "INN",
                 "OGRN",
                 "KPP",
                 "OKPO"
+            ]
+        },
+        {
+            "displayname": "Bank Details",
+            "fields": [
+                "BankName",
+                "BankNameEng",
+                "BankAddress",
+                "BankAddressEng",
+                "BankINN",
+                "BankBIK",
+                "CorrAcc",
+                "BankSWIFT"
+            ]
+
+        },
+        {
+            "displayname": "Accounts",
+            "fields": [
+                "AccRUB",
+                "AccUSD",
+                "AccUSDTran",
+                "AccEURO",
+                "AccEuroTran",
+                "AccSEK",
+                "AccSEKTran",
+                "AccGBP",
+                "AccGBPTran",
+                "AccPLN",
+                "AccPLNTran"
             ]
         }
     ]
